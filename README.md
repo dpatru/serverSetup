@@ -19,6 +19,7 @@ If you have ssh-copy-id on the local machine, use it.
     local$ ssh-copy-id username@serverName.local
 
 Otherwise, do it manually.
+
     local$ cat 
     local$ ssh username@serverName.local
     server-ssh-shell$ cd ~/
