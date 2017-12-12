@@ -32,6 +32,10 @@ If you get a permission error, you've done something wrong.
 
 ## Setup Samba
 
+See
+https://askubuntu.com/questions/781963/simple-samba-share-no-password
+for more information.
+
 If you want to have a clean install, at least one person recommends
 purging the existing samba:
 
