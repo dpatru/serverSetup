@@ -1,0 +1,22 @@
+* Tips for dealing with graphics card and multiseat in Ubuntu 16.04
+
+I tried running a dual monitors where a 4k monitor was connected to an AMD FirePro w4100 graphics card and a 1080p monitor was connected to the built-in Intel graphics. The FirePro-connected monitor would flicker and shake. 
+
+Here's how I got it to work.
+
+1. Set the bios to enable the graphics card first. 
+
+2. Assign the built-in Intel graphics to a separate seat (seat1). This will give you two separate seats, which was what I wanted. 
+
+If you want just one seat, assign the graphics card to a separate seat. In my setup, if the graphics card was assigned to a separate seat, then there would still only be one seat, with the desktop spanning both monitors, but the FirePro-connected monitor would not flicker. 
+
+** How to do multiseat in Ubuntu 16.04
+
+Use the `loginctl` command to discover what devices are available and assign them to different seats. `loginctl help` provides help.
+
+`loginctl seat-status seat0` shows the devices attached to seat0. To attach the builtin Intel graphics to a separate seat (seat1), use `loginctl assign seat1 /sys/devices/...`. Attach Intel graphics, a keyboard and mouse, sound, and anything else you want to the second seat. 
+
+In my system, seat assignments worked immediately. The Intel-graphics-connected monitor flashed to a login-screen immediately after assignment. But if this does not happen, you may have to restart the X system using the command 
+
+
+
