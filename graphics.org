@@ -12,11 +12,11 @@ If you want just one seat, assign the graphics card to a separate seat. In my se
 
 ** How to do multiseat in Ubuntu 16.04
 
-Use the `loginctl` command to discover what devices are available and assign them to different seats. `loginctl help` provides help.
+Use the ~loginctl~ command to discover what devices are available and assign them to different seats. ~loginctl help~ provides help.
 
-`loginctl seat-status seat0` shows the devices attached to seat0. To attach the builtin Intel graphics to a separate seat (seat1), use `loginctl assign seat1 /sys/devices/...`. Attach Intel graphics, a keyboard and mouse, sound, and anything else you want to the second seat. 
+~loginctl seat-status seat0~ shows the devices attached to seat0. To attach the builtin Intel graphics to a separate seat (seat1), use ~loginctl assign seat1 /sys/devices/...~. Attach Intel graphics, a keyboard and mouse, sound, and anything else you want to the second seat. 
 
-In my system, seat assignments worked immediately. The Intel-graphics-connected monitor flashed to a login-screen immediately after assignment. But if this does not happen, you may have to restart the X system using the command `sudo systemctl restart lightdm.service` (see https://askubuntu.com/a/1222). You can also reboot.
+In my system, seat assignments worked immediately. The Intel-graphics-connected monitor flashed to a login-screen immediately after assignment. But if this does not happen, you may have to restart the X system using the command ~sudo systemctl restart lightdm.service~ (see https://askubuntu.com/a/1222). You can also reboot.
 
 This was enough to get the system working for me. I may try installing the AMD proprietary driver, but the FirePro card works pretty well with the driver built-in to Ubuntu.
 
