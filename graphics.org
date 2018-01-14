@@ -22,3 +22,5 @@ This was enough to get the system working for me. I may try installing the AMD p
 
 
 
+** AMD FirePro W4100 Setup
+My FirePro W4100 flicked badly until I disabled DisplayPort 1.2 on the monitor.
