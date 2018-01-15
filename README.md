@@ -61,6 +61,8 @@ Now you can ssh into your server like this:
     server-ssh-shell$ sudo apt-get install ufw
     # open ssh port only
     sudo ufw allow ssh    
+    sudo ufw enable
+    sudo ufw status verbose
 
 ## safe mode
 
