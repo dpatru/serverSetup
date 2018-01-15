@@ -2,5 +2,6 @@
 
     local$ ssh username@serverName.local
     server-ssh-shell$ sudo apt-get install ufw
-    # todo: open ssh port only
+    # open ssh port only
+    sudo ufw allow ssh
 
