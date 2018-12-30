@@ -4,6 +4,7 @@
     server-ssh-shell$ sudo apt-get install ufw
     # open ssh port only
     sudo ufw allow ssh
+    sudo ufw allow samba
     sudo ufw enable
     sudo ufw status verbose
     
