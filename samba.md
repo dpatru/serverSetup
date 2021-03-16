@@ -4,8 +4,8 @@
 
 Use the `gparted` command if you need to format the disk.
 
-Find the name and UUID of the disk using the commands `lshw` and
-`blkid /dev/sdb` (assuming your disk name is sdb).
+Find the name and UUID of the disk using the commands `sudo lshw` and
+`sudo blkid /dev/sdb` (assuming your disk name is sdb).
 
 Create a mount point:
 
@@ -13,7 +13,7 @@ Create a mount point:
 
 Prepare to mount the disk by adding the following line to your
 fstab. (Replace the UUID in the example with yours that you found with
-the `blkid` command: 
+the `sudo blkid` command: 
 
 	UUID=1532e85b-0337-412d-9644-ef6ad282efdb /media/sambafiles vfat
     rw,uid=nobody,gid=nogroup,umask=0000 0 2
