@@ -12,7 +12,7 @@ Create a mount point:
     sudo mkdir /media/sambafiles
 
 Prepare to mount the disk by adding the following line to your
-fstab. (Replace the UUID in the example with yours that you found with
+/etc/fstab file. (Replace the UUID in the example with yours that you found with
 the `sudo blkid` command: 
 
 	UUID=1532e85b-0337-412d-9644-ef6ad282efdb /media/sambafiles vfat
